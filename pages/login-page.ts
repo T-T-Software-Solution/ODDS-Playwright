@@ -5,12 +5,14 @@ export class LoginPage {
     readonly userNameInput: Locator;
     readonly passwordInput: Locator;
     readonly loginButton: Locator;
+    readonly requiredPasswordText: Locator;
 
     constructor(page: Page) { 
         this.page = page; 
         this.userNameInput = this.page.getByTestId('username-input'); // Prepare object here to reduce code duplication when using it in other methods
         this.passwordInput = this.page.getByTestId('password-input');
         this.loginButton = this.page.getByRole('button', { name: 'Login' });
+        this.requiredPasswordText = this.page.getByText('Password is required');
     }
 
     async goToLoginPage(){
@@ -33,6 +35,6 @@ export class LoginPage {
     }
 
     async displayErrorMissingPassword(){
-        await expect(this.page.getByText('Password is required')).toBeVisible();
+        await expect(this.requiredPasswordText).toBeVisible();
     }
 }
