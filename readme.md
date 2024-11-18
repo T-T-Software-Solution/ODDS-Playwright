@@ -35,3 +35,5 @@ Run UI
  ```
  yarn playwright codegen https://workshop-playwright.vercel.app
  ```
+
+ เสร็จแล้วลอง Refactor Code เป็น Page Object เพื่อให้ Code ใน Test Spec อ่านง่ายขึ้น
