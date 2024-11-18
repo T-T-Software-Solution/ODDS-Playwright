@@ -14,4 +14,15 @@ test.describe('User Login', () => {
     const homePage = new HomePage(page);
     await homePage.expectDisplayHomePage();
   });
+
+  test('Login Failed with No Password', async ({ page }) => {
+    
+    const loginPage = new LoginPage(page);
+
+    await loginPage.goToLoginPage();
+    await loginPage.displayLoginPage();
+    await loginPage.loginWithOnlyUsername();
+    await loginPage.displayErrorMissingPassword();
+  });
 });
+

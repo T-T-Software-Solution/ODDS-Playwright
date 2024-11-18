@@ -36,4 +36,6 @@ Run UI
  yarn playwright codegen https://workshop-playwright.vercel.app
  ```
 
- เสร็จแล้วลอง Refactor Code เป็น Page Object เพื่อให้ Code ใน Test Spec อ่านง่ายขึ้น
+เสร็จแล้วลอง Refactor Code เป็น Page Object เพื่อให้ Code ใน Test Spec อ่านง่ายขึ้น
+- ดูตัวอย่างใน `pages` และ `02.odds.refactoring`
+- เสร็จแล้วรัน `yarn playwright test --ui`

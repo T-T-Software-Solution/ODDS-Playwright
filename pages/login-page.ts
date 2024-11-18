@@ -26,4 +26,13 @@ export class LoginPage {
         await this.passwordInput.fill('doe');
         await this.loginButton.click();
     }
+
+    async loginWithOnlyUsername(){
+        await this.userNameInput.fill('john');
+        await this.loginButton.click();
+    }
+
+    async displayErrorMissingPassword(){
+        await expect(this.page.getByText('Password is required')).toBeVisible();
+    }
 }
