@@ -1,0 +1,13 @@
+{
+  "name": "ODDS-Playwright",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:T-T-Software-Solution/ODDS-Playwright.git",
+  "author": "Ponggun <wittawat@tt-ss.net>",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.48.2",
+    "@types/node": "^22.9.0"
+  },
+  "scripts": {}
+}
